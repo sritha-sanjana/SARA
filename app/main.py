@@ -15,6 +15,7 @@ app.add_middleware(
         "http://localhost:5173",      # Local Vite dev server
         "http://127.0.0.1:5173",      # Local development
         "https://sara-9u4x.onrender.com",  # Backend (for health checks)
+        "https://sara-biomedical.vercel.app",
         # Add frontend deployment domains here when known
         # e.g., "https://sara-frontend.vercel.app"
     ],
