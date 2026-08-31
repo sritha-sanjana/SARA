@@ -1,5 +1,8 @@
 import type { SARAResponse } from '../types/sara';
 
+// Use environment variable for API base URL; falls back to empty string (relative path) for local development
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export async function analyzeCase(caseText: string): Promise<SARAResponse> {
   const trimmed = caseText.trim();
   if (!trimmed) {
@@ -11,7 +14,8 @@ export async function analyzeCase(caseText: string): Promise<SARAResponse> {
   const timeoutId = setTimeout(() => controller.abort(), 120000);
 
   try {
-    const response = await fetch('/analyze', {
+    const analyzeUrl = `${API_BASE_URL}/analyze`;
+    const response = await fetch(analyzeUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
