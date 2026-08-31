@@ -9,6 +9,8 @@ import { ConsensusDebateView } from './components/ConsensusDebateView';
 import { AgentMatrixView } from './components/AgentMatrixView';
 import { Award, Scale, Users, Activity, AlertOctagon, ChevronDown, ChevronUp } from 'lucide-react';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export function App() {
   const [caseText, setCaseText] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -23,7 +25,7 @@ export function App() {
   useEffect(() => {
     async function checkApi() {
       try {
-        const res = await fetch('/analyze', {
+        const res = await fetch(`${API_BASE_URL}/analyze`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ case_text: '' }), // dummy reachability check
