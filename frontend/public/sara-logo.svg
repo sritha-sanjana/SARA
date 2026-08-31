@@ -1,0 +1,55 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle Background -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+  
+  <!-- DNA Helix (Left side) -->
+  <g stroke="#8b5cf6" stroke-width="1.5" fill="none">
+    <path d="M 60 50 Q 70 60 60 70" />
+    <path d="M 60 70 Q 70 80 60 90" />
+    <path d="M 60 90 Q 70 100 60 110" />
+    <circle cx="60" cy="55" r="2" fill="#8b5cf6"/>
+    <circle cx="60" cy="75" r="2" fill="#8b5cf6"/>
+    <circle cx="60" cy="95" r="2" fill="#8b5cf6"/>
+    <circle cx="70" cy="65" r="2" fill="#8b5cf6"/>
+    <circle cx="70" cy="85" r="2" fill="#8b5cf6"/>
+    <circle cx="70" cy="105" r="2" fill="#8b5cf6"/>
+  </g>
+  
+  <!-- Brain Profile (Right side) -->
+  <g fill="none" stroke="#3b82f6" stroke-width="2">
+    <!-- Brain outline -->
+    <path d="M 130 60 Q 140 55 145 65 Q 150 75 148 85 Q 150 95 145 105 Q 140 115 130 120 Q 125 110 128 95 Q 126 80 130 60" />
+    <!-- Brain curves -->
+    <path d="M 135 70 Q 140 75 138 85" />
+    <path d="M 135 85 Q 140 90 138 100" />
+  </g>
+  
+  <!-- Leaf/Plant (Center-bottom) -->
+  <g fill="#8b5cf6">
+    <ellipse cx="100" cy="125" rx="8" ry="12" transform="rotate(-30 100 125)"/>
+    <ellipse cx="100" cy="125" rx="6" ry="10" transform="rotate(30 100 125)" opacity="0.7"/>
+  </g>
+  
+  <!-- Medical Cross -->
+  <g fill="none" stroke="#a78bfa" stroke-width="1">
+    <line x1="95" y1="85" x2="105" y2="85" stroke-width="1.5"/>
+    <line x1="100" y1="80" x2="100" y2="90" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Molecules/Atoms (Top) -->
+  <g fill="none" stroke="#8b5cf6" stroke-width="1">
+    <circle cx="85" cy="55" r="1.5" fill="#8b5cf6"/>
+    <circle cx="95" cy="50" r="1.5" fill="#8b5cf6"/>
+    <circle cx="105" cy="55" r="1.5" fill="#8b5cf6"/>
+    <line x1="85" y1="55" x2="95" y2="50" />
+    <line x1="95" y1="50" x2="105" y2="55" />
+    <line x1="95" y1="50" x2="95" y2="65" />
+  </g>
+</svg>

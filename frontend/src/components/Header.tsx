@@ -1,5 +1,6 @@
 import React from 'react';
-import { Activity, ShieldCheck, AlertCircle } from 'lucide-react';
+import { ShieldCheck, AlertCircle } from 'lucide-react';
+import saraLogo from '../assets/SARA_Logo.png';
 
 interface HeaderProps {
   apiConnected: boolean | null;
@@ -13,7 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ apiConnected }) => {
     <header className="app-header">
       <div className="header-brand">
         <div className="brand-icon">
-          <Activity size={24} aria-hidden="true" />
+          <img src={saraLogo} alt="SARA Logo" style={{ width: '50px', height: '50px' }} />
         </div>
         <div className="brand-title">
           <h1>

@@ -28,7 +28,7 @@ export function App() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ case_text: '' }), // dummy reachability check
         });
-        if (res.status === 400 || res.ok) {
+        if (res.status === 400 || res.status === 422 || res.ok) {
           setApiConnected(true);
         } else {
           setApiConnected(false);
